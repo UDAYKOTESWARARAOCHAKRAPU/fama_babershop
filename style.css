@@ -1006,6 +1006,7 @@ body {
     border-radius: 8px;
     padding: 10px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
 }
 
 .contact-form .form-control:focus {
