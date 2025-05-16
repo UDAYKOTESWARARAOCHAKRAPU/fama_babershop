@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fama Barber Shop and Beauty Salon</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts for Playfair Display -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+            rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Fama Barber Shop</a>
+                <button class="btn btn-toggle-sidebar d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <i class="fas fa-phone-alt me-1"></i> +1 940-612-9127
+                    </span>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/p/FAMA-Beauty-Salon-Barber-Shop-Texas-100050372991553/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/famabeautysalontx/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="tel:+19406129127" class="btn btn-primary ms-3">Call
+                        Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar (Offcanvas) -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar"
+            aria-labelledby="sidebarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="sidebarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="preferences">
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="mt-auto">
+                    <div class="phone-section">
+                        <a href="tel:+19406129127">
+                            <i class="fas fa-phone-alt"></i> +1 940-612-9127
+                        </a>
+                    </div>
+                    <div class="phone-section">
+                        <a
+                            href="https://www.google.com/maps/place/500+N+Bell+Ave+%23109,+Denton,+TX+76209"
+                            target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> 500 N Bell Ave
+                            #109, Denton, TX
+                        </a>
+                    </div>
+                    <div
+                        class="social-icons d-flex justify-content-center mt-3">
+                        <a href="https://facebook.com" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="logo">Fama Barber Shop</div>
+                <h1>Premium Barber Shop in Denton, TX</h1>
+                <div class="caption"></div>
+                <div class="divider"></div>
+                <p class="lead"></p>
+                <a href="#contact" class="btn btn-primary btn-lg mt-3">Book
+                    Now</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Fama Barber Shop</h2>
+                <h3 class="visible">Our Story</h3>
+                <p class="visible">Established in 2015, Fama Barber Shop has
+                    been a cornerstone of style in Denton, TX. Our journey began
+                    with a simple mission: to provide exceptional grooming
+                    services in a welcoming, upscale environment. Over the
+                    years, we’ve built a reputation for precision, creativity,
+                    and unparalleled customer care.</p>
+                <p class="visible">At Fama, we believe a haircut is more than
+                    just a service—it’s an experience. Our skilled barbers
+                    combine classic techniques with modern trends to craft looks
+                    that reflect your unique personality. Step into our shop,
+                    and you’ll feel the difference: a warm atmosphere, a
+                    friendly team, and a commitment to making you look and feel
+                    your best.</p>
+                <div class="row">
+                    <div class="col-md-6 about-image">
+                        <img src="./Images/about.jpg"
+                            alt="Barber Shop Interior">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4">
+                            <div class="highlights">
+                                <h3 class="visible">Why Choose Us?</h3>
+                                <p class="visible"><strong>10+ Years of
+                                        Excellence:</strong> A decade of
+                                    delivering top-notch grooming services.</p>
+                                <p class="visible"><strong>Expert
+                                        Barbers:</strong> Our team is trained in
+                                    the latest techniques and styles.</p>
+                                <p class="visible"><strong>Customer
+                                        Satisfaction:</strong> Rated 4.6 stars
+                                    with over 116 reviews from happy
+                                    clients.</p>
+                                <p class="visible"><strong>Prime
+                                        Location:</strong> Conveniently located
+                                    at 500 N Bell Ave #109, Denton, TX.</p>
+                            </div>
+                            <a href="#contact"
+                                class="btn btn-primary mt-3" style="color: #fff;">Visit Us Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card p-4">
+                            <h3 class="visible">About Us</h3>
+                            <p
+                                class="info-item category visible"><strong>Category:</strong>
+                                Barber Shop</p>
+                            <p
+                                class="info-item rating visible"><strong>Rating:</strong>
+                                4.6 stars (116+ reviews)</p>
+                            <p
+                                class="info-item status visible"><strong>Status:</strong>
+                                Open ⋅ Closes 7 PM</p>
+                            <p
+                                class="info-item location visible"><strong>Location:</strong>
+                                500 N Bell Ave #109, Denton, TX 76209, United
+                                States</p>
+                            <p
+                                class="info-item phone visible"><strong>Phone:</strong>
+                                <a href="tel:+19406129127">+1
+                                    940-612-9127</a></p>
+                            <div class="divider visible"></div>
+                            <h4
+                                style="color: #D4AF37; font-family: 'Playfair Display', serif; font-size: 1.5rem;"
+                                class="visible">Operating Hours</h4>
+                            <table class="hours-table">
+                                <tr><td>Monday</td><td>9 AM - 7 PM</td></tr>
+                                <tr><td>Tuesday</td><td>9 AM - 7 PM</td></tr>
+                                <tr><td>Wednesday</td><td>9 AM - 7 PM</td></tr>
+                                <tr><td>Thursday</td><td>9 AM - 7 PM</td></tr>
+                                <tr><td>Friday</td><td>9 AM - 7 PM</td></tr>
+                                <tr><td>Saturday</td><td>10 AM - 6 PM</td></tr>
+                                <tr><td>Sunday</td><td>Closed</td></tr>
+                            </table>
+                            <a
+                                href="https://www.google.com/maps/place/500+N+Bell+Ave+%23109,+Denton,+TX+76209"
+                                target="_blank" class="btn btn-primary mt-3" style="color: #fff;">Get
+                                Directions</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4">
+                            <h3 class="visible">Our Services</h3>
+                            <p class="service-item haircut visible">Men's
+                                Haircut - $30</p>
+                            <p class="service-item shave visible">Hot Towel
+                                Shave - $25</p>
+                            <p class="service-item beard visible">Beard Trim -
+                                $15</p>
+                            <p class="service-item style visible">Hair Styling -
+                                $20</p>
+                            <p class="service-item color visible">Hair Coloring
+                                - $50</p>
+                            <p class="note visible"><em>Note:</em>
+                                "Costly compared to other barbershops with better haircuts."
+                                - Customer feedback</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <p class="description visible">Explore our stunning hairstyles
+                    and hear from our satisfied customers.</p>
+
+                <!-- Hairstyles Block -->
+                <h3 class="visible">Our Hairstyles</h3>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-card">
+                            <div class="image-container">
+                                <img src="./Images/classic.jpg"
+                                    alt="Classic Fade">
+                            </div>
+                            <div class="caption">Classic Fade</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-card">
+                            <div class="image-container">
+                                <img src="./Images/pompadour.jpg"
+                                    alt="Modern Pompadour">
+                            </div>
+                            <div class="caption">Modern Pompadour</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-card">
+                            <div class="image-container">
+                                <img src="./Images/textured.webp"
+                                    alt="Textured Crop">
+                            </div>
+                            <div class="caption">Textured Crop</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-card">
+                            <div class="image-container">
+                                <img src="./Images/undercut.webp" alt="Undercut">
+                            </div>
+                            <div class="caption">Undercut</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-card">
+                            <div class="image-container">
+                                <img src="./Images/sidepart.jpg"
+                                    alt="Side Part">
+                            </div>
+                            <div class="caption">Side Part</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-card">
+                            <div class="image-container">
+                                <img src="./Images/buzz.jpg"
+                                    alt="Buzz Cut">
+                            </div>
+                            <div class="caption">Buzz Cut</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider visible"></div>
+
+                <!-- Reviews Block -->
+                <h3 class="visible">What Our Customers Say</h3>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="review-card">
+                            <p
+                                class="review-text">"Loved my Classic Fade! The barber nailed it with such precision."</p>
+                            <div class="attribution">- John D.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="review-card">
+                            <p
+                                class="review-text">"The Modern Pompadour was a bit pricey, but the service made it worth it."</p>
+                            <div class="attribution">- Sarah M.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="review-card">
+                            <p
+                                class="review-text">"Best Textured Crop I've had in Denton! I’ll definitely be back."</p>
+                            <div class="attribution">- Mike R.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="review-card">
+                            <p
+                                class="review-text">"My Undercut looks amazing, thanks to the skilled team at Fama."</p>
+                            <div class="attribution">- Alex T.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="review-card">
+                            <p
+                                class="review-text">"The Side Part gave me a classic look, perfect for my style."</p>
+                            <div class="attribution">- Emily S.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="review-card">
+                            <p
+                                class="review-text">"Got a clean Buzz Cut, and the atmosphere here is great!"</p>
+                            <div class="attribution">- Chris L.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="placeholder-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Book an appointment or send us a message. We're here to
+                    help!</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form id="contact-form" class="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name
+                                    <span class="required">*</span></label>
+                                <input type="text" class="form-control"
+                                    id="name" name="name"
+                                    placeholder="Enter your full name" required>
+                                <div class="invalid-feedback">Please enter your
+                                    full name.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email
+                                    Address <span
+                                        class="required">*</span></label>
+                                <input type="email" class="form-control"
+                                    id="email" name="email"
+                                    placeholder="Enter your email" required>
+                                <div class="invalid-feedback">Please enter a
+                                    valid email address.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone
+                                    Number <span
+                                        class="required">*</span></label>
+                                <input type="tel" class="form-control"
+                                    id="phone" name="phone"
+                                    placeholder="Enter your phone number"
+                                    required>
+                                <div class="invalid-feedback">Please enter a
+                                    valid phone number.</div>
+                            </div>
+                            <!-- Date and Time in a Single Row -->
+                            <div class="mb-3">
+                                <label class="form-label">Preferred Appointment
+                                    <span class="required">*</span></label>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <input type="date" class="form-control"
+                                            id="appointment-date"
+                                            name="appointment-date"
+                                            min="2025-05-15" required>
+                                        <div class="invalid-feedback">Please
+                                            select a valid date.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="time" class="form-control"
+                                            id="appointment-time"
+                                            name="appointment-time" required>
+                                        <div class="invalid-feedback">Please
+                                            select a valid time.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message"
+                                    class="form-label">Message</label>
+                                <textarea class="form-control" id="message"
+                                    name="message" rows="4"
+                                    placeholder="Your message or special requests"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary w-100">Submit</button>
+                        </form>
+                        <div id="form-success"
+                            class="alert alert-success mt-3 d-none">
+                            Thank you for your submission! We'll get back to you
+                            soon.
+                        </div>
+                        <div class="text-center mt-4">
+                            <p>Or call us directly:</p>
+                            <a href="tel:+19406129127"
+                                class="btn btn-primary">Call Now: +1
+                                940-612-9127</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Google Maps Iframe -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5>Find Us</h5>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.539135573184!2d-97.12575208480153!3d33.21860648084377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dcd7f5e5b9f5b%3A0x7b5c9f5a9e5b9f5b!2s500%20N%20Bell%20Ave%20%23109%2C%20Denton%2C%20TX%2076209%2C%20USA!5e0!3m2!1sen!2sin!4v1634567890123"
+                                width="100%"
+                                height="250"
+                                style="border:0;"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5>Contact Info</h5>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>500 N Bell Ave #109, Denton, TX 76209</p>
+                        <p><i class="fas fa-phone-alt me-2"></i><a href="tel:+19406129127">+1 940-612-9127</a></p>
+                        <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@famabarbershop.com">info@famabarbershop.com</a></p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/p/FAMA-Beauty-Salon-Barber-Shop-Texas-100050372991553/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/famabeautysalontx/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom text-center mt-4">
+                    <p>© 2025 Fama Barber Shop and Beauty Salon. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS and Popper.js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+        <!-- Custom JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
