@@ -722,13 +722,19 @@ body {
         font-size: 0.9rem;
     }
 }
+/* Gallery Section */
 .gallery-section {
-    background: linear-gradient(135deg, #1C2526 0%, #2A3435 50%, #1C2526 100%);
+    background: linear-gradient(315deg, #1C2526, #2A3435, #3A4546, #2A3435, #1C2526);
+    background-size: 200% 200%;
+    animation: galleryBackground 15s ease-in-out infinite;
     padding: 80px 0;
     position: relative;
     overflow: hidden;
-    background-attachment: fixed;
-    background-size: cover;
+}
+@keyframes galleryBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 .gallery-section .container {
     position: relative;
@@ -814,26 +820,19 @@ body {
 .gallery-section .gallery-card {
     background: rgba(28, 37, 38, 0.6);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-image: linear-gradient(45deg, #D4AF37, #e6c84f) 1;
+    border: none; /* Removed border for cleaner look */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.3s ease, transform 0.3s ease;
+    opacity: 1; /* Ensure visibility by default */
+    transform: translateY(0);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     margin-bottom: 30px;
 }
 .gallery-section .gallery-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
-.gallery-section .gallery-card:nth-child(1) { transition-delay: 0.2s; }
-.gallery-section .gallery-card:nth-child(2) { transition-delay: 0.3s; }
-.gallery-section .gallery-card:nth-child(3) { transition-delay: 0.4s; }
-.gallery-section .gallery-card:nth-child(4) { transition-delay: 0.5s; }
-.gallery-section .gallery-card:nth-child(5) { transition-delay: 0.6s; }
-.gallery-section .gallery-card:nth-child(6) { transition-delay: 0.7s; }
 .gallery-section .gallery-card:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.5);
     transform: translateY(-5px);
@@ -862,12 +861,7 @@ body {
     padding: 10px;
     font-size: 1.1rem;
     font-family: 'Playfair Display', serif;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease-in-out 0.5s, transform 0.5s ease-in-out 0.5s;
-}
-.gallery-section .gallery-card.visible .caption {
-    opacity: 1;
+    opacity: 1; /* Ensure visibility by default */
     transform: translateY(0);
 }
 .gallery-section .review-card {
@@ -877,22 +871,12 @@ body {
     border-image: linear-gradient(45deg, #D4AF37, #e6c84f) 1;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.3s ease, transform 0.3s ease;
+    opacity: 1; /* Ensure visibility by default */
+    transform: translateY(0);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     margin-bottom: 30px;
     padding: 20px;
 }
-.gallery-section .review-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-.gallery-section .review-card:nth-child(1) { transition-delay: 0.2s; }
-.gallery-section .review-card:nth-child(2) { transition-delay: 0.3s; }
-.gallery-section .review-card:nth-child(3) { transition-delay: 0.4s; }
-.gallery-section .review-card:nth-child(4) { transition-delay: 0.5s; }
-.gallery-section .review-card:nth-child(5) { transition-delay: 0.6s; }
-.gallery-section .review-card:nth-child(6) { transition-delay: 0.7s; }
 .gallery-section .review-card:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.5);
     transform: translateY(-5px);
@@ -903,12 +887,7 @@ body {
     line-height: 1.5;
     position: relative;
     padding-left: 25px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease-in-out 0.5s, transform 0.5s ease-in-out 0.5s;
-}
-.gallery-section .review-card.visible .review-text {
-    opacity: 1;
+    opacity: 1; /* Ensure visibility by default */
     transform: translateY(0);
 }
 .gallery-section .review-card .review-text::before {
@@ -927,27 +906,52 @@ body {
     font-size: 0.9rem;
     text-align: right;
     margin-top: 10px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease-in-out 0.6s, transform 0.5s ease-in-out 0.6s;
-}
-.gallery-section .review-card.visible .attribution {
-    opacity: 1;
+    opacity: 1; /* Ensure visibility by default */
     transform: translateY(0);
 }
+
+/* Mobile-specific adjustments */
 @media (max-width: 767px) {
+    .gallery-section {
+        padding: 40px 0; /* Reduce padding for mobile */
+    }
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+    .gallery-section h3 {
+        font-size: 1.5rem;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
+    }
+    .gallery-section p.description {
+        font-size: 1rem;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
+    }
+    .gallery-section .divider {
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: scaleX(1);
+    }
     .gallery-section .gallery-card {
         margin-bottom: 20px;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
     }
     .gallery-section .gallery-card .caption {
         font-size: 1rem;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
     }
     .gallery-section .review-card {
         margin-bottom: 20px;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
     }
     .gallery-section .review-card .review-text {
         font-size: 0.9rem;
         padding-left: 20px;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
     }
     .gallery-section .review-card .review-text::before {
         font-size: 0.9rem;
@@ -955,6 +959,13 @@ body {
     }
     .gallery-section .review-card .attribution {
         font-size: 0.8rem;
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0);
+    }
+    /* Ensure all gallery cards and review cards are visible on mobile */
+    .gallery-section .gallery-card,
+    .gallery-section .review-card {
+        display: block !important; /* Ensure they are not hidden */
     }
 }
 .placeholder-section {
